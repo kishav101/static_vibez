@@ -5,13 +5,14 @@ const NavBarStyles = tss.create(({ }) => ({
     },
     nav: {
         listStyleType: 'none',
-        height: 70,
         width: "100%",
+        height: "100",
         backgroundColor: "#FFF",
-        boxShadow: `0 1px 4px ${process.env.REACT_APP_CLIENT_PRIMARY_COLOUR}`
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
     },
     navContainer: {
         display: 'flex',
+        alignItems: 'center'
     },
     listContainer: {
         display: "flex"
