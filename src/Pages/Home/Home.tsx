@@ -1,3 +1,6 @@
+import { LandingImageComponentContainer } from "../../Components/LandingImageComponent";
+
+
 
 interface HomeProps{
 
@@ -10,7 +13,7 @@ const Home: React.FC<HomeProps> = props => {
 
     return(
         <>
-        <h3>Home</h3>
+            <LandingImageComponentContainer/>
         </>
     )
 }
