@@ -18,7 +18,7 @@ const QuoteButtonComponent: FC<QuoteButtonComponentProps> = props =>{
         <>
         <div className={classes.root}>
             <div>
-                 <FaArrowDown size={55} className={classes.downArrowIconContainer}  />
+                 <FaArrowDown size={35} className={classes.downArrowIconContainer}  />
             </div>
             <div>
                 <button type="submit" className={classes.inputBtn}>

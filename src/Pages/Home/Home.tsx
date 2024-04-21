@@ -1,4 +1,5 @@
 import { LandingImageComponentContainer } from "../../Components/LandingImageComponent";
+import { LandingServicesComponentContainer } from "../../Components/LandingServicesComponent";
 
 
 
@@ -13,7 +14,11 @@ const Home: React.FC<HomeProps> = props => {
 
     return(
         <>
+        <div>
             <LandingImageComponentContainer/>
+            <LandingServicesComponentContainer />
+        </div>
+          
         </>
     )
 }

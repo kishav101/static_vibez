@@ -18,9 +18,6 @@ const LandingImageComponentContainer: React.FC<LandingImageComponentContainerPro
 
     const { classes } = LandingImageStyles();
 
-    // const [displaySloganText, setDisplaySloganText] = useState('');
-    // const [currentSloganIndex, setCurrentSloganIndex] = useState(0);
-
     const [sloganState, setSloganState] = useState({
         displayText:"",
         currentIndex: 0
@@ -33,10 +30,30 @@ const LandingImageComponentContainer: React.FC<LandingImageComponentContainerPro
 
     const [currentColorSloganIndex, SetcurrentColorSloganIndex] = useState(0);
 
+    const [windowSize, setWindowSize] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+
     useEffect(() => {
       const interval = setInterval(() => {
         SetcurrentColorSloganIndex(prevIndex => (prevIndex + 1) % data.Slogan.length);
-      }, 100); // Adjust the interval according to your preference
+      }, 100); 
   
       return () => clearInterval(interval);
     }, [data.Slogan]);
@@ -71,12 +88,17 @@ const LandingImageComponentContainer: React.FC<LandingImageComponentContainerPro
     }
    }, [decriptionState.currentIndex, sloganState.currentIndex])
 
+   useEffect(() => {
+    console.log(windowSize)
+   }, [windowSize])
+
     return(
     <>
         <LandingImageComponent 
           styles={classes}
           SloganTextAnimation={sloganState.displayText}
-          DescriptionTextAnimation={decriptionState.displayText}/>
+          DescriptionTextAnimation={decriptionState.displayText}
+          windowSize={windowSize}/>
     </>
     )
 }

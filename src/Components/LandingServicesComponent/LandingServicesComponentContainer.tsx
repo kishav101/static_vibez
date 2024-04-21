@@ -4,13 +4,14 @@ import LandingImageStyles from "./LandingServicesStyles";
 import { LandingPageData } from "../../DataSource/HomePageData/LandingPageData";
 import LandingServicesComponent from "./LandingServicesComponent";
 import LandingServicesStyles from "./LandingServicesStyles";
+import { LandingServiceData } from "../../DataSource/HomePageData/LandingServicesData";
 
 
 interface LandingServicesComponentContainerProps{
 
 }
 
-const data = LandingPageData;
+const data = LandingServiceData;
 
 const LandingServicesComponentContainer: React.FC<LandingServicesComponentContainerProps> = props => {
 
@@ -22,7 +23,7 @@ const LandingServicesComponentContainer: React.FC<LandingServicesComponentContai
 
     return(
     <>
-      <LandingServicesComponent styles={classes}/>
+      <LandingServicesComponent styles={classes} data={data}/>
     </>
     )
 }

@@ -1,14 +1,13 @@
 import { tss } from "tss-react";
 
-const k = `@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}`; 
 
 const QuoteButtonComponentStyles = tss.withParams<{}>().create(({ }) => ({
     root: {
         flexDirection: 'column',
         marginTop: "5%",
+        "@media (max-width: 768px)": {
+            marginTop: "10%"
+        },
     },
     inputBtn: {
         marginTop: "2%",
@@ -35,28 +34,27 @@ const QuoteButtonComponentStyles = tss.withParams<{}>().create(({ }) => ({
         
     },
     downArrowIconContainer: {
-        marginRight: 15,
+        marginRight: 10,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         top: 5,
-        padding: 5,
+        padding: 0,
         color: "#FFF",
-        animation: "waveTranslate 2s linear infinite",
+        animation: "waveTranslate 3.5s linear infinite",
         "@keyframes waveTranslate": {
             "0%": {
                 transform: "translateX(0px)",
-                scale: 0,
             },
             "25%": {
                 transform: "translateX(90px)",
-                scale: 10,
             },
             "75%": {
                 transform: "translateX(180px)",
-                scale: 15,
                 color: process.env.REACT_APP_CLIENT_SECONDARY_COLOUR,
             },
             "100%": {
-                transform: "translateX(270px)",
-                scale: 30,
+                transform: "translateX(0px)",
                 color: process.env.REACT_APP_CLIENT_SECONDARY_COLOUR,
             },
         },
