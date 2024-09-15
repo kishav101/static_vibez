@@ -1,5 +1,7 @@
+import { HomeScreenSecondRowComponentContaine } from "../../Components/HomeScreenSecondRowComponent";
 import { LandingImageComponentContainer } from "../../Components/LandingImageComponent";
 import { LandingServicesComponentContainer } from "../../Components/LandingServicesComponent";
+import { ReasonComponentContainer } from "../../Components/ReasonsComponent";
 
 
 
@@ -17,6 +19,8 @@ const Home: React.FC<HomeProps> = props => {
         <div>
             <LandingImageComponentContainer/>
             <LandingServicesComponentContainer />
+            <HomeScreenSecondRowComponentContaine />
+            <ReasonComponentContainer/>
         </div>
           
         </>
