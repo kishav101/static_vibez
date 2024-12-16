@@ -1,6 +1,7 @@
 
 import { FC, memo } from "react";
 import FooterComponent from "./FooterComponent";
+import { FooterComponentData } from "../../DataSource/HomePageData/FooterComponentData";
 interface FooterComponentContainerProps {
 
 }
@@ -11,9 +12,11 @@ const FooterComponentContainer: React.FC<FooterComponentContainerProps> = props 
 
     } = props;
 
+    const data = FooterComponentData;
+
     return (
         <>
-              <FooterComponent/>
+              <FooterComponent data={data}/>
         </>
     );
 

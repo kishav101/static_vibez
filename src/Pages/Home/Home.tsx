@@ -1,3 +1,4 @@
+import { BasicTextBasedComponentContainer } from "../../Components/BasicTextBasedComponent";
 import { HomeScreenSecondRowComponentContaine } from "../../Components/HomeScreenSecondRowComponent";
 import { LandingImageComponentContainer } from "../../Components/LandingImageComponent";
 import { LandingServicesComponentContainer } from "../../Components/LandingServicesComponent";
@@ -21,6 +22,7 @@ const Home: React.FC<HomeProps> = props => {
             <LandingServicesComponentContainer />
             <HomeScreenSecondRowComponentContaine />
             <ReasonComponentContainer/>
+            <BasicTextBasedComponentContainer/>
         </div>
           
         </>
