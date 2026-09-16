@@ -21,7 +21,6 @@ const BasicTextBasedComponentStyles = tss.withParams<{}>().create(({ }) => ({
             process.env.REACT_APP_CLIENT_SECONDARY_COLOUR || "#000",
             0.7
         ),
-
     },
     leftBoxInnerBox: {
         padding: "1%",
@@ -58,7 +57,7 @@ const BasicTextBasedComponentStyles = tss.withParams<{}>().create(({ }) => ({
     leftBoxCheckBoxRow: {
         flexDirection: "row",
         display: 'flex',
-        alignItems: 'cernter',
+        //   alignItems: 'center',
         justifyContent: 'center'
     },
     leftBoxCheckBox: {
